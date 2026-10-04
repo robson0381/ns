@@ -286,7 +286,8 @@ main>section.about-hero{padding:22px 0 0;background:none}
 .about-switch button{background:none;border:0;padding:6px 8px;cursor:pointer;color:var(--ink);font-size:.95rem}
 .about-actions{margin:0}
 /* Career: history spread over the whole block, entries in two columns on wide screens */
-.career-section summary{padding:4px 0}
+.career-section details{padding:10px 0}
+.career-section summary{padding:0;line-height:1.25;align-items:center}
 /* Centred column: left edge under the second "e" of the title, about 7.6% in from each side */
 @media(min-width:961px){.career-section>.wrap{padding-inline:7.6%}}
 .career-section .cv{list-style:none;padding:0;margin:18px 0 6px}
@@ -337,7 +338,12 @@ details ul{margin:14px 0 0;padding-left:1.1em}.cv b{display:inline-block;min-wid
 
 /* Services */
 .services{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1px;background:var(--line)}
-.service{background:var(--paper);padding:30px;display:flex;flex-direction:column}.service p{color:var(--ink-soft);flex:1}
+.service{background:var(--paper);padding:30px;display:flex;flex-direction:column}
+/* Commissions hero: cards in the block's own light tone, blue buttons (black when hovered or pressed) */
+.page-services .services{background:none;gap:clamp(16px,2vw,32px)}
+.page-services .service{background:none;padding-inline:0}
+.service .btn{background:var(--blue);border-color:var(--blue);color:#fff}
+.service .btn:hover,.service .btn:active,.service .btn:focus-visible{background:var(--ink);border-color:var(--ink);color:var(--paper)}.service p{color:var(--ink-soft);flex:1}
 
 form.contact{display:grid;gap:18px;max-width:760px}
 label{display:grid;gap:6px;font-size:.78rem;letter-spacing:.04em}
@@ -553,7 +559,7 @@ textarea{min-height:170px;resize:vertical}.two{display:grid;grid-template-column
   .page-services main>section:first-child,.page-news main>section.current-feature{margin-top:22px;min-height:max(570px,min(calc(var(--vh,1vh)*74),780px));display:flex;flex-direction:column;justify-content:center;padding:clamp(22px,calc(var(--vh,1vh)*4),52px) 0}
   .page-services .lead{font-size:clamp(1.1rem,min(2.25vw,calc(var(--vh,1vh)*3.3)),1.7rem);margin-bottom:0}
   .page-services .services{margin-top:clamp(18px,calc(var(--vh,1vh)*4.5),44px);grid-template-columns:repeat(4,minmax(0,1fr))}
-  .page-services .service{padding:clamp(16px,calc(var(--vh,1vh)*3.2),30px)}
+  .page-services .service{padding:clamp(16px,calc(var(--vh,1vh)*3.2),30px) 0}
   .page-services .service p{font-size:clamp(.86rem,calc(var(--vh,1vh)*2.1),1rem)}
   .page-services .service h3{margin-bottom:clamp(8px,calc(var(--vh,1vh)*1.4),14px)}
 }
