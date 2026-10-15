@@ -44,7 +44,7 @@ jobs:
           python build_review.py
           python audit_site.py
       - name: Prepare project-pages artifact
-        run: python build_pages_preview.py --base-path /norasayyad.com
+        run: python build_pages_preview.py --base-path "/${{ github.event.repository.name }}"
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact

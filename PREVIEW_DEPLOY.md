@@ -5,7 +5,7 @@ The prototype is prepared for a temporary GitHub Pages preview. This is separate
 ## What is already configured
 
 - `build_pages_preview.py` builds an isolated `_site/` copy.
-- Root-relative links are rewritten for the GitHub project Pages base path `/norasayyad.com/`.
+- Root-relative links are rewritten for the GitHub project Pages base path, taken from the repository name (`/ns/` since the rename; the workflow reads it automatically).
 - `.nojekyll` is added to the preview artifact.
 - Source files remain unchanged.
 - The preview remains `noindex,nofollow`.
@@ -21,7 +21,7 @@ GitHub Pages must be enabled once for this repository:
 
 Expected preview base URL after a successful deployment:
 
-`https://robson0381.github.io/norasayyad.com/`
+`https://robson0381.github.io/ns/`
 
 Useful review routes:
 

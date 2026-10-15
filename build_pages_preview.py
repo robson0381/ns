@@ -2,7 +2,7 @@
 """Prepare the static prototype for GitHub Pages preview hosting.
 
 The production prototype uses root-relative URLs (/work/, /assets/...). GitHub
-project Pages is served under /norasayyad.com/, so this creates an isolated
+project Pages is served under /<repository name>/ (now /ns/), so this creates an isolated
 _site/ copy and prefixes only internal root-relative URLs. Source files remain
 unchanged.
 """
@@ -36,7 +36,7 @@ def rewrite_html(text: str, base: str) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base-path", default="/norasayyad.com")
+    parser.add_argument("--base-path", default="/ns")
     args = parser.parse_args()
     base = normalize_base(args.base_path)
 
